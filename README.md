@@ -46,7 +46,7 @@ Once user is authenticated, the app takes them to a screen where they can see re
 
 ## Wireframes
 
-*In progress*
+![wireframes](wireframes.jpg)
 
 ## Evaluation
 
