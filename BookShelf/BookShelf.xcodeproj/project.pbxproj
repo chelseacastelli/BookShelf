@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694181F12423CB11004FC3CA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694181F02423CB11004FC3CA /* Utilities.swift */; };
 		69807ECE2422A6C700810D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69807ECD2422A6C700810D47 /* AppDelegate.swift */; };
 		69807ED02422A6C700810D47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69807ECF2422A6C700810D47 /* SceneDelegate.swift */; };
 		69807ED22422A6C700810D47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69807ED12422A6C700810D47 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694181F02423CB11004FC3CA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		69807ECA2422A6C700810D47 /* BookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69807ECD2422A6C700810D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69807ECF2422A6C700810D47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		694181F22423CB15004FC3CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				694181F02423CB11004FC3CA /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		69807EC12422A6C700810D47 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 			children = (
 				69807ECD2422A6C700810D47 /* AppDelegate.swift */,
 				69807ECF2422A6C700810D47 /* SceneDelegate.swift */,
+				694181F22423CB15004FC3CA /* Helpers */,
 				69807EE72422A78800810D47 /* View Controllers */,
 				69807ED32422A6C700810D47 /* Main.storyboard */,
 				69807ED62422A6CA00810D47 /* Assets.xcassets */,
@@ -157,6 +168,7 @@
 			files = (
 				69807ED22422A6C700810D47 /* ViewController.swift in Sources */,
 				69807ECE2422A6C700810D47 /* AppDelegate.swift in Sources */,
+				694181F12423CB11004FC3CA /* Utilities.swift in Sources */,
 				69807EE22422A75C00810D47 /* SignUpViewController.swift in Sources */,
 				69807EE42422A76A00810D47 /* LoginViewController.swift in Sources */,
 				69807ED02422A6C700810D47 /* SceneDelegate.swift in Sources */,
