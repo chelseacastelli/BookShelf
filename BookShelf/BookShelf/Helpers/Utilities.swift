@@ -46,6 +46,7 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
+    // Check if password >= 8, contains at least 1 letter, & 1 special character
     static func isPasswordValid(_ password : String) -> Bool {
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")

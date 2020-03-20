@@ -40,10 +40,10 @@
                                     <constraint firstItem="eXs-qZ-xvc" firstAttribute="height" secondItem="deu-BO-erY" secondAttribute="height" id="C0Y-kZ-McK"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-vN-tTT">
-                                <rect key="frame" x="50" y="280" width="315" height="185"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="filledLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-vN-tTT">
+                                <rect key="frame" x="50" y="395" width="315" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="Vvg-Aa-KlJ"/>
+                                    <constraint firstAttribute="height" constant="70" id="Vvg-Aa-KlJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -77,23 +77,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jpx-Ib-xPG">
-                                <rect key="frame" x="40" y="84" width="334" height="435.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="320.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uyQ-xD-Q0z">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="185"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="filledLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uyQ-xD-Q0z">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="KG0-xy-Klo"/>
+                                        </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-p7-0NZ">
-                                        <rect key="frame" x="0.0" y="205" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="90" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIn-K1-sT4">
-                                        <rect key="frame" x="0.0" y="275" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="160" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6u-HR-LhC">
-                                        <rect key="frame" x="0.0" y="345" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="230" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bWw-1V-dQg"/>
                                         </constraints>
@@ -104,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-v9-SoX">
-                                        <rect key="frame" x="0.0" y="415" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="300" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -145,33 +148,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BWM-N9-oOQ">
-                                <rect key="frame" x="40" y="84" width="334" height="575.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="460.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NnJ-mZ-kJg">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="185"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="filledLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NnJ-mZ-kJg">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="c2l-Fo-MCx"/>
+                                        </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKG-D5-Ajl">
-                                        <rect key="frame" x="0.0" y="205" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="90" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUy-3t-DAa">
-                                        <rect key="frame" x="0.0" y="275" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="160" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1c-Ik-Bgk">
-                                        <rect key="frame" x="0.0" y="345" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="230" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ruu-0Y-z78">
-                                        <rect key="frame" x="0.0" y="415" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="300" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Mo-7lK">
-                                        <rect key="frame" x="0.0" y="485" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="370" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Yv5-e4-khH"/>
                                         </constraints>
@@ -182,7 +188,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbf-ux-E15">
-                                        <rect key="frame" x="0.0" y="555" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="440" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -266,9 +272,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="662" height="185"/>
+        <image name="filledLogo" width="339" height="119"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b3F-Io-jW4"/>
+        <segue reference="aq8-yI-Qsr"/>
     </inferredMetricsTieBreakers>
 </document>
