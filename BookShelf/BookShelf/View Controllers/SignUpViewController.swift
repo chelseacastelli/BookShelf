@@ -95,6 +95,7 @@ class SignUpViewController: UIViewController {
                     // User was successfully created .. store name
                     let db = Firestore.firestore()
                     
+                    
                     db.collection("users").addDocument(data: ["firstname": firstName, "lastname": lastName, "uid": result!.user.uid]) { (error) in
                         
                         if error != nil {
@@ -104,14 +105,16 @@ class SignUpViewController: UIViewController {
                         
                     }
                     
+                    // Transition to home screen
+                    self.transitionToHome()
+                    
                 }
                 
             }
             
-            // Transition to home screen
-        }
             
-        
+        }
+    
         
     }
     
@@ -120,7 +123,13 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    
+    func transitionToHome() {
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+        
+    }
     
 
 }
