@@ -317,6 +317,8 @@ func signUpWithEmail(email: String, password: String, completion: @escaping (Boo
 struct Home: View {
     
     @ObservedObject var Books = getData()
+    @State var show = false
+    @State var url = ""
     
     var body: some View {
         
@@ -344,9 +346,18 @@ struct Home: View {
                             .multilineTextAlignment(.leading)
                         
                     }
+        
+                }
+                .onTapGesture {
                     
+                    self.url = i.url
+                    self.show.toggle()
                     
                 }
+                
+            }.sheet(isPresented: self.$show) {
+                
+                WebView(url: self.url)
                 
             }
             
@@ -403,7 +414,7 @@ class getData: ObservableObject {
                 
                 let description = i["volumeInfo"]["description"].stringValue
                 let imurl = i["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
-                let url1 = i["webReaderLink"].stringValue
+                let url1 = i["volumeInfo"]["previewLink"].stringValue
                 
                 DispatchQueue.main.async {
                     
