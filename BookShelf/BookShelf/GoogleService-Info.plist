@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>110029375057-8e32g3reebbg7rm9rlvr9su19sf0scnu.apps.googleusercontent.com</string>
+	<string>435191715518-jlcu2e14h7eebk1vmupjquutmlvluauh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.110029375057-8e32g3reebbg7rm9rlvr9su19sf0scnu</string>
+	<string>com.googleusercontent.apps.435191715518-jlcu2e14h7eebk1vmupjquutmlvluauh</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDo-Js1Mdlvfwr3glVioePOf2fJut2KK-I</string>
+	<string>AIzaSyBTr1VN0EHuxjh6aX1MPGNfVdwFXVaADAU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>110029375057</string>
+	<string>435191715518</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.chelseacastelli.BookShelf</string>
+	<string>com.chelseacastelli.bookshelf2</string>
 	<key>PROJECT_ID</key>
-	<string>bookshelf-ed170</string>
+	<string>bookshelf-4ffa3</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bookshelf-ed170.appspot.com</string>
+	<string>bookshelf-4ffa3.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:110029375057:ios:f056f2924bc7148fefda70</string>
+	<string>1:435191715518:ios:d22a5847a173f2bd5730ef</string>
 	<key>DATABASE_URL</key>
-	<string>https://bookshelf-ed170.firebaseio.com</string>
+	<string>https://bookshelf-4ffa3.firebaseio.com</string>
 </dict>
 </plist>

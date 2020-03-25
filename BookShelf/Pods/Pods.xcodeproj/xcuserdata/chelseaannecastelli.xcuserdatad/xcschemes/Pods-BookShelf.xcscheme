@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8C234620CE6050D10D1523428738B98"
-               BuildableName = "Pods_BookShelf.framework"
-               BlueprintName = "Pods-BookShelf"
+               BlueprintIdentifier = "9F4EB656CBBD9E40B4E8DF95AB02FAAC"
+               BuildableName = "Pods_bookshelf.framework"
+               BlueprintName = "Pods-bookshelf"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

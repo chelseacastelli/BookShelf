@@ -1,2 +1,2 @@
-${PODS_ROOT}/Target Support Files/Pods-BookShelf/Pods-BookShelf-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle
+${PODS_ROOT}/Target Support Files/Pods-bookshelf/Pods-bookshelf-resources.sh
+${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle

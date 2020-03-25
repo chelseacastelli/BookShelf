@@ -1,23 +1,49 @@
 //
 //  AppDelegate.swift
-//  BookShelf
+//  bookshelf
 //
-//  Created by ChelseaAnne Castelli on 3/18/20.
+//  Created by ChelseaAnne Castelli on 3/24/20.
 //  Copyright © 2020 Make School. All rights reserved.
 //
 
 import UIKit
+import GoogleSignIn
 import Firebase
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
 
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         return true
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        Auth.auth().signIn(with: credential) { (res, err) in
+            
+            if err != nil {
+                print((err?.localizedDescription)!)
+                return
+            }
+            
+            print(res!.user.email)
+            UserDefaults.standard.set(true, forKey: "status")
+            NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+            
+        }
     }
 
     // MARK: UISceneSession Lifecycle
