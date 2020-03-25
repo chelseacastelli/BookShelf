@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 return
             }
             
-            print(res!.user.email)
             UserDefaults.standard.set(true, forKey: "status")
             NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
             

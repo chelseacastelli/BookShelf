@@ -9,8 +9,20 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import SwiftyJSON
+import SDWebImageSwiftUI
+import WebKit
 
 struct ContentView: View {
+    
+    init() {
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor.black,
+            .font : UIFont(name:"Charter", size: 40)!
+        ]
+        
+    }
     
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     
@@ -20,7 +32,12 @@ struct ContentView: View {
         
             if status {
                 
-                Home()
+                NavigationView {
+                    
+                    Home()
+                        .navigationBarTitle("bookshelf.")
+                
+                }
                 
             } else {
                 
@@ -254,7 +271,6 @@ struct SignUp: View {
 }
 
 
-
 struct GoogleSignView : UIViewRepresentable {
     
     func makeUIView(context: UIViewRepresentableContext<GoogleSignView>) -> GIDSignInButton {
@@ -300,11 +316,39 @@ func signUpWithEmail(email: String, password: String, completion: @escaping (Boo
 
 struct Home: View {
     
+    @ObservedObject var Books = getData()
+    
     var body: some View {
         
         VStack {
             
-            Text("Home")
+            List(Books.data) { i in
+                
+                HStack {
+                    
+                    if i.imurl != "" {
+                    
+                        WebImage(url: URL(string: i.imurl)!).resizable().frame(width: 120, height: 170).cornerRadius(10)
+                    
+                    } else {
+                        
+                        Image("books").resizable().frame(width: 120, height: 170).cornerRadius(10)
+                        
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text(i.title).fontWeight(.bold)
+                        Text(i.authors)
+                        Text(i.desc).font(.caption).lineLimit(4)
+                            .multilineTextAlignment(.leading)
+                        
+                    }
+                    
+                    
+                }
+                
+            }
             
             Button(action: {
                 
@@ -312,11 +356,92 @@ struct Home: View {
                 GIDSignIn.sharedInstance()?.signOut()
                 UserDefaults.standard.set(false, forKey: "status")
                 NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+                
             }) {
                 
-                Text("Logout")
+                Text("Logout").padding([.top,.bottom], 10)
                 
             }
         }
     }
+}
+
+class getData: ObservableObject {
+    
+    @Published var data = [Book]()
+    
+    init() {
+        
+        let url = "https://www.googleapis.com/books/v1/volumes?q=computer+science"
+        let session = URLSession(configuration: .default)
+        
+        session.dataTask(with: URL(string: url)!) { (data, _, err) in
+            
+            if err != nil {
+                
+                print((err?.localizedDescription)!)
+                return
+                
+            }
+            
+            let json = try! JSON(data: data!)
+            let items = json["items"].array!
+            
+            for i in items {
+                
+                let id = i["id"].stringValue
+                let title = i["volumeInfo"]["title"].stringValue
+                
+                let authors = i["volumeInfo"]["authors"].array!
+                var author = ""
+                
+                for a in authors {
+                    
+                    author += "\(a.stringValue)"
+                    
+                }
+                
+                let description = i["volumeInfo"]["description"].stringValue
+                let imurl = i["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
+                let url1 = i["webReaderLink"].stringValue
+                
+                DispatchQueue.main.async {
+                    
+                    self.data.append(Book(id: id, title: title, authors: author, desc: description, imurl: imurl, url: url1))
+                    
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
+    
+    
+}
+
+struct Book: Identifiable {
+    
+    var id, title, authors, desc, imurl, url: String
+    
+}
+
+struct WebView: UIViewRepresentable {
+    
+    var url: String
+    
+    func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {
+        
+        let view = WKWebView()
+        view.load(URLRequest(url: URL(string: url)!))
+        return view
+        
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
+        
+        
+        
+    }
+    
 }
