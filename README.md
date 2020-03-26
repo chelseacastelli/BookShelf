@@ -7,6 +7,7 @@ An app that allows users to look up book reviews
 - Xcode
 - SwiftUI
 - Google Books API
+- SwiftyJSON
 - Firebase
 
 ## Screenshots
